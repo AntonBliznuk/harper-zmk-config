@@ -21,12 +21,12 @@
 
         default_layer {
             bindings = <
-&kp ESC          &kp N1           &kp N2     &kp N3      &kp N4    &kp N5          &kp N6            &kp N7     &kp N8     &kp N9            &kp N0     &kp BACKSPACE
-&kp GRAVE        &kp Q            &kp W      &kp E       &kp R     &kp T           &kp Y             &kp U      &kp I      &kp O             &kp P      &kp LEFT_BRACE
-&kp LS(LG(TAB))  &kp A            &kp S      &kp D       &kp F     &kp G           &kp H             &kp J      &kp K      &kp L             &kp SEMI   &kp SQT
-&kp LSHFT        &kp Z            &kp X      &kp C       &kp V     &kp B           &kp C_MUTE        &kp TAB    &kp N      &kp M             &kp COMMA  &kp DOT
-&kp FSLH         &kp RIGHT_BRACE  &kp LCTRL  &kp LSHIFT  &kp LALT  &mo ADJ  &mo 1  &kp LEFT_CONTROL  &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo 2      &kp GLOBE       &kp LEFT_ALT
-                                                                                   &kp RSHIFT                                                                           &kp RCTRL
+&kp ESC          &kp N1           &kp N2     &kp N3      &kp N4    &kp N5          &kp N6            &kp N7        &kp N8     &kp N9            &kp N0     &kp BACKSPACE
+&kp GRAVE        &kp Q            &kp W      &kp E       &kp R     &kp T           &kp Y             &kp U         &kp I      &kp O             &kp P      &kp LEFT_BRACE
+&kp LS(LG(TAB))  &kp A            &kp S      &kp D       &kp F     &kp G           &kp H             &kp J         &kp K      &kp L             &kp SEMI   &kp SQT
+&kp LSHFT        &kp Z            &kp X      &kp C       &kp V     &kp B           &kp C_MUTE        &kp CAPSLOCK  &kp N      &kp M             &kp COMMA  &kp DOT
+&kp FSLH         &kp RIGHT_BRACE  &kp LCTRL  &kp LSHIFT  &kp LALT  &mo ADJ  &mo 1  &kp LEFT_CONTROL  &kp SPACE     &kp ENTER  &kp LEFT_COMMAND  &mo 2      &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp LEFT_ALT
+                                                                                   &kp RSHIFT                                                                                                    &kp RCTRL
             >;
 
             sensor-bindings =
@@ -36,12 +36,12 @@
 
         lower_layer {
             bindings = <
-&none     &none     &none      &none      &none     &none               &none     &none      &none      &none     &none           &none
-&none     &kp PLUS  &kp MINUS  &kp EQUAL  &kp STAR  &none               &none     &none      &none      &none     &none           &none
-&none     &kp EXCL  &kp AT     &kp HASH   &kp DLLR  &kp PRCNT           &none     &kp LBKT   &kp LPAR   &kp LBRC  &kp UNDERSCORE  &kp PIPE
-&none     &none     &none      &none      &none     &none               &none     &none      &none      &kp RBKT  &kp RPAR        &kp RBRC
-&kp BSLH  &none     &kp LCTRL  &kp LGUI   &kp LALT  &mo ADJ    &mo RSE  &mo LWR   &kp SPACE  &kp SPACE  &mo RSE   &mo ADJ         &mo LWR   &kp RALT
-                                                                        &kp RGUI                                                            &kp RCTRL
+&none     &none     &none      &none      &none     &none               &none             &none      &none      &none             &none           &none
+&none     &kp PLUS  &kp MINUS  &kp EQUAL  &kp STAR  &none               &none             &none      &none      &none             &none           &none
+&none     &kp EXCL  &kp AT     &kp HASH   &kp DLLR  &kp PRCNT           &none             &kp LBKT   &kp LPAR   &kp LBRC          &kp UNDERSCORE  &kp PIPE
+&none     &none     &none      &none      &none     &none               &none             &none      &none      &kp RBKT          &kp RPAR        &kp RBRC
+&kp BSLH  &none     &kp LCTRL  &kp LGUI   &kp LALT  &mo ADJ    &mo RSE  &kp LEFT_CONTROL  &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo ADJ         &mo LWR   &kp RALT
+                                                                        &kp RGUI                                                                            &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -49,12 +49,12 @@
 
         raise_layer {
             bindings = <
-&none       &none       &none      &none        &none        &none             &none      &none      &none      &none      &none    &none
-&none       &kp INS     &kp PSCRN  &kp K_CMENU  &none        &none             &kp PG_UP  &kp HOME   &kp UP     &kp END    &none    &none
-&none       &none       &none      &none        &none        &none             &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL  &kp BSPC
-&kp LSHIFT  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &none             &none      &none      &none      &none      &none    &none
-&none       &none       &kp LCTRL  &kp LGUI     &kp LALT     &mo ADJ  &mo RSE  &mo LWR    &kp SPACE  &kp SPACE  &mo RSE    &mo ADJ  &mo LWR   &kp RALT
-                                                                               &kp RGUI                                                       &kp RCTRL
+&none       &none       &none      &none        &none        &none             &none             &none      &none      &none             &none    &none
+&none       &kp INS     &kp PSCRN  &kp K_CMENU  &none        &none             &kp PG_UP         &kp HOME   &kp UP     &kp END           &none    &none
+&none       &none       &none      &none        &none        &none             &kp PG_DN         &kp LEFT   &kp DOWN   &kp RIGHT         &kp DEL  &kp BSPC
+&kp LSHIFT  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &none             &none             &none      &none      &none             &none    &none
+&none       &none       &kp LCTRL  &kp LGUI     &kp LALT     &mo ADJ  &mo RSE  &kp LEFT_CONTROL  &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo ADJ  &mo LWR   &kp RALT
+                                                                               &kp RGUI                                                                     &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
