@@ -25,8 +25,8 @@
 &kp GRAVE  &kp Q            &kp W      &kp E          &kp R             &kp T           &kp Y               &kp U             &kp I      &kp O             &kp P      &kp LBKT
 &kp TAB    &kp A            &kp S      &kp D          &kp F             &kp G           &kp H               &kp J             &kp K      &kp L             &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z            &kp X      &kp C          &kp V             &kp B           &kp C_MUTE          &kp LC(CAPSLOCK)  &kp N      &kp M             &kp COMMA  &kp DOT
-&kp FSLH   &kp RIGHT_BRACE  &kp GLOBE  &kp LC(LG(F))  &kp LEFT_COMMAND  &mo ADJ  &mo 1  &kp LEFT_CONTROL    &kp SPACE         &kp ENTER  &kp LEFT_COMMAND  &mo 2      &kp LC(SPACE)  &kp LEFT_ALT
-                                                                                        &kp LC(LEFT_ARROW)                                                                           &kp LC(RIGHT_ARROW)
+&kp FSLH   &kp RIGHT_BRACE  &kp GLOBE  &kp LC(LG(F))  &kp LEFT_COMMAND  &mo ADJ  &mo 1  &kp LEFT_CONTROL    &kp SPACE         &kp ENTER  &kp LEFT_COMMAND  &mo 2      &kp LEFT_CONTROL  &kp LEFT_ALT
+                                                                                        &kp LC(LEFT_ARROW)                                                                              &kp LC(RIGHT_ARROW)
             >;
 
             sensor-bindings =
@@ -49,12 +49,12 @@
 
         raise_layer {
             bindings = <
-&none       &none       &none      &none               &none                &none             &none             &none      &none      &none             &none    &none
-&none       &kp INS     &kp PSCRN  &none               &none                &none             &kp PG_UP         &kp HOME   &kp UP     &kp END           &none    &none
-&none       &none       &none      &none               &none                &none             &kp PG_DN         &kp LEFT   &kp DOWN   &kp RIGHT         &kp DEL  &kp BSPC
-&kp LSHIFT  &kp K_UNDO  &kp K_CUT  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none             &none             &none      &none      &none             &none    &none
-&none       &none       &kp LCTRL  &kp LGUI            &kp LALT             &mo ADJ  &mo RSE  &kp LEFT_CONTROL  &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo ADJ  &mo LWR   &kp RALT
-                                                                                              &kp RGUI                                                                     &kp RCTRL
+&none       &none       &none             &none               &none                &none             &none             &none      &none      &none             &none             &none
+&none       &kp INS     &kp PSCRN         &none               &none                &none             &kp PG_UP         &kp HOME   &kp UP     &kp END           &none             &none
+&none       &none       &kp LEFT_COMMAND  &kp LEFT_SHIFT      &kp RIGHT_ALT        &none             &kp PG_DN         &kp LEFT   &kp DOWN   &kp RIGHT         &kp LEFT_COMMAND  &kp BSPC
+&kp LSHIFT  &kp K_UNDO  &kp K_CUT         &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none             &none             &none      &none      &none             &none             &none
+&none       &none       &kp LCTRL         &kp LGUI            &kp LALT             &mo ADJ  &mo RSE  &kp LEFT_CONTROL  &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo ADJ           &mo LWR   &kp RALT
+                                                                                                     &kp RGUI                                                                              &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
