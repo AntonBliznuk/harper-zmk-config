@@ -24,7 +24,7 @@
 &kp ESC           &kp N1           &kp N2     &kp N3         &kp N4            &kp N5         &kp N6              &kp N7     &kp N8     &kp N9            &kp N0     &kp BACKSPACE
 &kp LC(LEFT_ALT)  &kp Q            &kp W      &kp E          &kp R             &kp T          &kp Y               &kp U      &kp I      &kp O             &kp P      &kp LBKT
 &kp TAB           &kp A            &kp S      &kp D          &kp F             &kp G          &kp H               &kp J      &kp K      &kp L             &kp SEMI   &kp SQT
-&kp LSHFT         &kp Z            &kp X      &kp C          &kp V             &kp B          &none               &none      &kp N      &kp M             &kp COMMA  &kp DOT
+&kp LSHFT         &kp Z            &kp X      &kp C          &kp V             &kp B          &kp C_MUTE          &none      &kp N      &kp M             &kp COMMA  &kp DOT
 &kp FSLH          &kp RIGHT_BRACE  &kp GLOBE  &kp LC(LG(F))  &kp LEFT_COMMAND  &mo 3   &mo 2  &kp LEFT_CONTROL    &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo 2      &kp LEFT_CONTROL  &kp LEFT_ALT
                                                                                               &kp LC(LEFT_ARROW)                                                                       &kp LC(RIGHT_ARROW)
             >;
@@ -49,12 +49,12 @@
 
         raise_layer {
             bindings = <
-&none       &none    &none             &none               &none                &none                            &none             &none      &none      &none             &none  &none
-&none       &kp INS  &kp PSCRN         &kp LC(LA(MINUS))   &kp LC(LA(EQUAL))    &kp LC(LA(C))                    &none             &none      &kp UP     &none             &none  &none
-&none       &none    &kp LEFT_CONTROL  &kp LEFT_ALT        &kp LEFT_COMMAND     &kp LC(LA(LEFT_COMMAND))         &none             &kp LEFT   &kp DOWN   &kp RIGHT         &none  &none
-&kp LSHIFT  &none    &none             &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none                            &none             &none      &none      &none             &none  &none
-&none       &none    &kp LCTRL         &kp LGUI            &kp LALT             &mo 3                     &mo 2  &kp LEFT_CONTROL  &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo 3  &mo 2  &kp RALT
-                                                                                                                 &kp RGUI                                                                &kp RCTRL
+&none       &none  &none             &none               &none                &none                            &none             &none      &none      &none             &none  &none
+&none       &none  &kp PSCRN         &kp LC(LA(MINUS))   &kp LC(LA(EQUAL))    &kp LC(LA(C))                    &none             &none      &kp UP     &none             &none  &none
+&none       &none  &kp LEFT_CONTROL  &kp LEFT_ALT        &kp LEFT_COMMAND     &kp LC(LA(LEFT_COMMAND))         &none             &kp LEFT   &kp DOWN   &kp RIGHT         &none  &none
+&kp LSHIFT  &none  &none             &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none                            &none             &none      &none      &none             &none  &none
+&none       &none  &kp LCTRL         &kp LGUI            &kp LALT             &mo 3                     &mo 2  &kp LEFT_CONTROL  &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo 3  &mo 2  &kp RALT
+                                                                                                               &kp RGUI                                                                &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
