@@ -50,7 +50,7 @@
         raise_layer {
             bindings = <
 &none       &none  &none             &none              &none              &none                            &none             &none      &none      &none             &none  &none
-&none       &none  &kp PSCRN         &kp LC(LA(MINUS))  &kp LC(LA(EQUAL))  &kp LC(LA(C))                    &none             &none      &kp UP     &none             &none  &none
+&none       &none  &kp LC(LA(RET))   &kp LC(LA(MINUS))  &kp LC(LA(EQUAL))  &kp LC(LA(C))                    &none             &none      &kp UP     &none             &none  &none
 &none       &none  &kp LEFT_CONTROL  &kp LEFT_ALT       &kp LEFT_COMMAND   &kp LC(LA(LEFT_COMMAND))         &none             &kp LEFT   &kp DOWN   &kp RIGHT         &none  &none
 &kp LSHIFT  &none  &none             &none              &none              &none                            &none             &none      &none      &none             &none  &none
 &none       &none  &none             &none              &kp LALT           &mo 3                     &mo 2  &kp LEFT_CONTROL  &kp SPACE  &kp ENTER  &kp LEFT_COMMAND  &mo 3  &mo 2  &kp RALT
