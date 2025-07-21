@@ -52,7 +52,7 @@
 &none       &none  &none             &none              &none              &none                            &none             &none          &none      &none             &none          &none
 &none       &none  &kp LC(LA(RET))   &kp LC(LA(MINUS))  &kp LC(LA(EQUAL))  &kp LC(LA(C))                    &none             &kp LG(GRAVE)  &kp UP     &none             &none          &none
 &none       &none  &kp LEFT_CONTROL  &kp LEFT_ALT       &kp LEFT_COMMAND   &kp LC(LA(LEFT_COMMAND))         &kp LA(X)         &kp LEFT       &kp DOWN   &kp RIGHT         &none          &none
-&kp LSHIFT  &none  &none             &none              &none              &none                            &none             &none          &none      &kp LC(SPACE)     &kp LC(LG(F))  &none
+&kp LSHIFT  &none  &none             &none              &kp LS(LG(P))      &kp LA(LS(LG(C)))                &none             &none          &none      &kp LC(SPACE)     &kp LC(LG(F))  &none
 &none       &none  &none             &none              &kp LALT           &mo 3                     &mo 2  &kp LEFT_CONTROL  &kp SPACE      &kp ENTER  &kp LEFT_COMMAND  &mo 3          &mo 2  &kp RALT
                                                                                                             &kp RGUI                                                                            &kp RCTRL
             >;
