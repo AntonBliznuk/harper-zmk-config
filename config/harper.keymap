@@ -92,8 +92,8 @@
         mouse_control {
             bindings = <
 &trans  &trans  &trans          &trans            &trans           &trans          &trans  &trans             &trans             &trans            &trans  &trans
-&trans  &trans  &trans          &msc MOVE_Y(15)   &trans           &trans          &trans  &trans             &mmv MOVE_Y(300)   &trans            &trans  &trans
-&trans  &trans  &mkp MCLK       &mkp LCLK         &mkp RCLK        &trans          &trans  &mmv MOVE_X(-300)  &mmv MOVE_Y(-300)  &mmv MOVE_X(300)  &trans  &to 0
+&trans  &trans  &trans          &msc MOVE_Y(15)   &trans           &trans          &trans  &trans             &mmv MOVE_Y(-500)  &trans            &trans  &trans
+&trans  &trans  &mkp MCLK       &mkp LCLK         &mkp RCLK        &trans          &trans  &mmv MOVE_X(-500)  &mmv MOVE_Y(500)   &mmv MOVE_X(500)  &trans  &to 0
 &trans  &trans  &msc SCRL_LEFT  &msc MOVE_Y(-15)  &msc SCRL_RIGHT  &trans          &trans  &trans             &trans             &trans            &trans  &trans
 &trans  &trans  &trans          &trans            &trans           &trans  &trans  &trans  &trans             &trans             &trans            &trans  &trans  &trans
                                                                                    &trans                                                                          &trans
