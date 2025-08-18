@@ -22,12 +22,12 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N1         &kp N2  &kp N3  &kp N4  &kp N5         &kp N6      &kp N7     &kp N8     &kp N9             &kp N0     &kp BACKSPACE
-&kp LCTRL  &kp Q          &kp W   &kp E   &kp R   &kp T          &kp Y       &kp U      &kp I      &kp O              &kp P      &kp RCTRL
-&kp TAB    &kp A          &kp S   &kp D   &kp F   &kp G          &kp H       &kp J      &kp K      &kp L              &kp SEMI   &to 5
-&kp LSHFT  &kp Z          &kp X   &kp C   &kp V   &kp B          &kp C_MUTE  &none      &kp N      &kp M              &kp COMMA  &kp DOT
-&kp FSLH   &kp RIGHT_ALT  &none   &none   &none   &mo 3   &mo 1  &mo 4       &kp SPACE  &kp ENTER  &kp RIGHT_COMMAND  &mo 2      &none          &none
-                                                                 &none                                                                          &none
+&kp ESC    &kp N1         &kp N2     &kp N3     &kp N4        &kp N5         &kp N6      &kp N7     &kp N8     &kp N9             &kp N0     &kp BACKSPACE
+&kp LCTRL  &kp Q          &kp W      &kp E      &kp R         &kp T          &kp Y       &kp U      &kp I      &kp O              &kp P      &kp RCTRL
+&kp TAB    &kp A          &kp S      &kp D      &kp F         &kp G          &kp H       &kp J      &kp K      &kp L              &kp SEMI   &to 5
+&kp LSHFT  &kp Z          &kp X      &kp C      &kp V         &kp B          &kp C_MUTE  &none      &kp N      &kp M              &kp COMMA  &kp DOT
+&kp FSLH   &kp RIGHT_ALT  &kp GLOBE  &kp LCTRL  &kp LEFT_ALT  &mo 3   &mo 1  &mo 4       &kp SPACE  &kp ENTER  &kp RIGHT_COMMAND  &mo 2      &kp RIGHT_COMMAND  &kp RIGHT_ALT
+                                                                             &kp RCTRL                                                                          &kp GLOBE
             >;
 
             sensor-bindings =
@@ -35,7 +35,7 @@
                 <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
-        lower_layer {
+        symbols {
             bindings = <
 &kp ESCAPE      &kp F1         &kp F2         &kp F3     &kp F4     &kp F5                       &kp F6  &kp F7     &kp F8     &kp F9    &kp F10          &kp F11
 &kp LCTRL       &kp PLUS       &kp MINUS      &kp EQUAL  &kp STAR   &kp QMARK                    &none   &none      &kp SQT    &kp PIPE  &none            &kp RCTRL
@@ -50,7 +50,7 @@
                 <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
-        raise_layer {
+        windnow_manager {
             bindings = <
 &none                         &none                     &none                     &none                     &none                         &none                             &none      &none                  &none      &none                         &none                         &none
 &none                         &none                     &kp LC(LA(LS(LG(M))))     &kp LA(LS(LC(LG(S))))     &kp LS(LA(LC(LG(B))))         &kp LC(LA(LS(LG(R))))             &none      &kp LG(LS(LA(LC(E))))  &kp UP     &kp LG(LS(LA(LC(D))))         &none                         &none
@@ -70,7 +70,7 @@
 &out OUT_BLE       &bt BT_SEL 0                     &bt BT_SEL 1                       &bt BT_SEL 2                      &bt BT_CLR                       &out OUT_USB                             &none     &none      &none      &none      &none  &none
 &rgb_ug RGB_TOG    &rgb_ug RGB_BRD                  &rgb_ug RGB_BRI                    &rgb_ug RGB_SPD                   &rgb_ug RGB_SPI                  &rgb_ug RGB_EFF                          &none     &none      &kp UP     &none      &none  &none
 &ext_power EP_TOG  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(218,100,50)  &rgb_ug RGB_COLOR_HSB(120,97,50)  &rgb_ug RGB_COLOR_HSB(60,0,100)  &rgb_ug RGB_COLOR_HSB(64,100,52)         &none     &kp LEFT   &kp DOWN   &kp RIGHT  &none  &none
-&sys_reset         &bootloader                      &none                              &rgb_ug RGB_COLOR_HSB(298,88,49)  &studio_unlock                   &none                                    &none     &none      &none      &none      &none  &none
+&sys_reset         &bootloader                      &rgb_ug RGB_COLOR_HSB(181,93,50)   &rgb_ug RGB_COLOR_HSB(298,88,49)  &studio_unlock                   &none                                    &none     &none      &none      &none      &none  &none
 &none              &none                            &kp LCTRL                          &kp LGUI                          &kp LALT                         &mo 3                             &mo 2  &mo 2     &kp SPACE  &kp SPACE  &mo 2      &mo 3  &mo 2  &kp RALT
                                                                                                                                                                                                    &kp RGUI                                                 &kp RCTRL
             >;
@@ -80,23 +80,23 @@
 
         text_navigation {
             bindings = <
-&none           &none   &none      &none             &none         &none           &trans  &trans          &trans          &trans           &kp DELETE  &kp BACKSPACE
-&trans          &trans  &trans     &none             &trans        &trans          &trans  &trans          &kp UP_ARROW    &trans           &trans      &trans
-&trans          &trans  &kp LCTRL  &kp LEFT_COMMAND  &kp LEFT_ALT  &trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans      &trans
-&kp LEFT_SHIFT  &trans  &trans     &trans            &trans        &trans          &trans  &trans          &trans          &trans           &trans      &trans
-&trans          &trans  &trans     &trans            &trans        &trans  &trans  &trans  &trans          &trans          &trans           &trans      &trans         &trans
-                                                                                   &trans                                                                              &trans
+&kp LANGUAGE_1  &kp LANGUAGE_2  &kp LANGUAGE_3  &none             &none         &none           &trans  &trans          &trans          &trans           &kp DELETE  &kp BACKSPACE
+&trans          &trans          &trans          &none             &trans        &trans          &trans  &trans          &kp UP_ARROW    &trans           &trans      &trans
+&trans          &trans          &kp LCTRL       &kp LEFT_COMMAND  &kp LEFT_ALT  &trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans      &trans
+&kp LEFT_SHIFT  &trans          &trans          &trans            &trans        &trans          &trans  &trans          &trans          &trans           &trans      &trans
+&trans          &trans          &trans          &trans            &trans        &trans  &trans  &trans  &trans          &trans          &trans           &trans      &trans         &trans
+                                                                                                &trans                                                                              &trans
             >;
         };
 
         mouse_control {
             bindings = <
-&trans  &trans  &trans          &trans            &trans           &trans          &trans  &trans             &trans             &trans            &trans  &trans
-&trans  &trans  &trans          &msc MOVE_Y(15)   &trans           &trans          &trans  &to 0              &mmv MOVE_Y(-600)  &to 0             &trans  &trans
-&trans  &trans  &mkp MCLK       &mkp RCLK         &mkp LCLK        &trans          &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &trans  &to 0
-&trans  &trans  &msc SCRL_LEFT  &msc MOVE_Y(-15)  &msc SCRL_RIGHT  &trans          &trans  &trans             &trans             &trans            &trans  &trans
-&trans  &trans  &trans          &trans            &trans           &trans  &trans  &trans  &trans             &trans             &trans            &mo 2   &trans  &trans
-                                                                                   &trans                                                                          &trans
+&to 0  &to 0  &to 0           &to 0             &to 0            &to 0         &to 0   &to 0              &to 0              &to 0             &to 0  &to 0
+&to 0  &to 0  &to 0           &msc MOVE_Y(15)   &to 0            &to 0         &to 0   &to 0              &mmv MOVE_Y(-600)  &to 0             &to 0  &to 0
+&to 0  &to 0  &mkp MCLK       &mkp RCLK         &mkp LCLK        &to 0         &to 0   &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &to 0  &to 0
+&to 0  &to 0  &msc SCRL_LEFT  &msc MOVE_Y(-15)  &msc SCRL_RIGHT  &to 0         &trans  &trans             &to 0              &to 0             &to 0  &to 0
+&to 0  &to 0  &to 0           &to 0             &to 0            &to 0  &to 0  &to 0   &to 0              &to 0              &to 0             &mo 2  &to 0  &to 0
+                                                                               &to 0                                                                         &to 0
             >;
         };
     };
