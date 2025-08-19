@@ -15,11 +15,11 @@
 &lt { quick_tap_ms = <200>; };
 
 &mt {
-    quick_tap_ms = <100>;
+    quick_tap_ms = <50>;
     tapping-term-ms = <300>;
     flavor = "tap-preferred";
-    quick-tap-ms = <100>;
-    require-prior-idle-ms = <100>;
+    quick-tap-ms = <50>;
+    require-prior-idle-ms = <50>;
     hold-trigger-key-positions = <>;
     bindings = <&kp>, <&kp>;
 };
