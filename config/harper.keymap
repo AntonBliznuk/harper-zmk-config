@@ -21,10 +21,10 @@
         run_roll_dota: run_roll_dota {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RETURN &kp FSLH &kp R &kp O &kp L &kp L &kp RETURN>;
+            bindings = <&kp RETURN &kp FSLH &kp R &kp O &kp L &kp L &kp RETURN &kp ESCAPE>;
             label = "RUN_ROLL_DOTA";
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         github_profile_link: github_profile_link {
