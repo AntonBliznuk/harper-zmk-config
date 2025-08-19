@@ -15,9 +15,14 @@
 &lt { quick_tap_ms = <200>; };
 
 &mt {
-    quick_tap_ms = <200>;
+    quick_tap_ms = <150>;
     tapping-term-ms = <200>;
-    flavor = "tap-preferred";
+    flavor = "balanced";
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <150>;
+    hold-while-undecided;
+    hold-while-undecided-linger;
+    hold-trigger-on-release;
 };
 
 / {
@@ -42,19 +47,6 @@
             #binding-cells = <0>;
             bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp H &kp U &kp B &kp DOT &kp C &kp O &kp M &kp FSLH &kp LS(A) &kp N &kp T &kp O &kp N &kp LS(B) &kp L &kp I &kp Z &kp N &kp U &kp K>;
             label = "GITHUB_PROFILE_LINK";
-        };
-    };
-
-    behaviors {
-        tap_or_hold: tap_or_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_OR_HOLD";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <200>;
         };
     };
 
