@@ -17,12 +17,11 @@
 &mt {
     quick_tap_ms = <150>;
     tapping-term-ms = <200>;
-    flavor = "balanced";
+    flavor = "tap-unless-interrupted";
     quick-tap-ms = <150>;
     require-prior-idle-ms = <150>;
     hold-while-undecided;
     hold-while-undecided-linger;
-    hold-trigger-on-release;
 };
 
 / {
