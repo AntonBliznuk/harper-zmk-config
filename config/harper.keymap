@@ -15,11 +15,10 @@
 &lt { quick_tap_ms = <200>; };
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <200>;
     flavor = "tap-preferred";
     quick-tap-ms = <0>;
     require-prior-idle-ms = <0>;
-    hold-trigger-key-positions = <>;
     bindings = <&kp>, <&kp>;
 };
 
@@ -45,6 +44,27 @@
             #binding-cells = <0>;
             bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp H &kp U &kp B &kp DOT &kp C &kp O &kp M &kp FSLH &kp LS(A) &kp N &kp T &kp O &kp N &kp LS(B) &kp L &kp I &kp Z &kp N &kp U &kp K>;
             label = "GITHUB_PROFILE_LINK";
+        };
+
+        main_email: main_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp L &kp I &kp Z &kp N &kp U &kp K &kp A &kp N &kp T &kp O &kp N &kp M &kp A &kp I &kp N &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "MAIN_EMAIL";
+        };
+
+        twink_email: twink_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp N &kp T &kp O &kp N &kp B &kp L &kp I &kp Z &kp N &kp U &kp K &kp N7 &kp N1 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "TWINK_EMAIL";
+        };
+
+        old_email: old_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp N &kp T &kp O &kp S &kp H &kp A &kp B &kp L &kp I &kp Z &kp N &kp U &kp K &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "OLD_EMAIL";
         };
     };
 
@@ -83,7 +103,7 @@
 
         manager_layer {
             bindings = <
-&kp ESCAPE                    &github_profile_link   &none                  &none                     &none                         &none                             &none                     &none                     &none                         &none                         &none                         &none
+&kp ESCAPE                    &github_profile_link   &none                  &none                     &none                         &none                             &main_email               &twink_email              &old_email                    &none                         &none                         &none
 &none                         &kp LS(LA(LC(LG(Q))))  &kp LC(LA(LS(LG(W))))  &kp LC(LEFT_COMMAND)      &kp LS(LA(LC(LG(R))))         &kp LC(LA(LS(LG(T))))             &kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(NUMBER_2)))  &kp LA(LC(LG(NUMBER_3)))      &kp LA(LC(LG(NUMBER_4)))      &kp LA(LC(LG(NUMBER_5)))      &none
 &none                         &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LEFT_COMMAND))  &kp LA(LC(LS(LEFT_COMMAND)))  &kp LS(LA(LC(LG(G))))             &kp LEFT_ARROW            &kp DOWN_ARROW            &kp UP_ARROW                  &kp RIGHT                     &none                         &none
 &kp LEFT_SHIFT                &kp LA(LC(LG(LS(Z))))  &kp LA(LC(LG(LS(X))))  &kp LA(LC(LG(LS(C))))     &kp LA(LC(LG(LS(V))))         &kp LA(LS(LC(LG(B))))             &none                     &none                     &kp LS(LA(LC(LG(NUMBER_1))))  &kp LS(LA(LC(LG(NUMBER_2))))  &kp LS(LA(LC(LG(NUMBER_3))))  &kp LS(LA(LC(LG(NUMBER_4))))
