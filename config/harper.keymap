@@ -146,7 +146,7 @@
             bindings = <
 &to 0  &to 0  &to 0           &to 0             &to 0            &to 0         &to 0              &to 0             &to 0              &to 0             &to 0  &to 0
 &to 0  &to 0  &to 0           &msc MOVE_Y(15)   &to 0            &to 0         &to 0              &to 0             &to 0              &to 0             &to 0  &to 0
-&to 0  &to 0  &mkp MCLK       &mkp RCLK         &mkp LCLK        &to 0         &mmv MOVE_X(-600)  &mmv MOVE_Y(600)  &mmv MOVE_Y(-600)  &mmv MOVE_X(600)  &to 0  &to 0
+&to 0  &to 0  &mkp MCLK       &mkp RCLK         &mkp LCLK        &to 0         &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)  &mmv MOVE_Y(-1000)  &mmv MOVE_X(1000)  &to 0  &to 0
 &to 0  &to 0  &msc SCRL_LEFT  &msc MOVE_Y(-15)  &msc SCRL_RIGHT  &to 0         &trans             &trans            &to 0              &to 0             &to 0  &to 0
 &to 0  &to 0  &to 0           &to 0             &to 0            &to 0  &to 0  &to 0              &to 0             &to 0              &to 0             &mo 2  &to 0  &to 0
                                                                                &to 0                                                                                   &to 0
