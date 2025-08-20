@@ -66,6 +66,19 @@
             bindings = <&kp A &kp N &kp T &kp O &kp S &kp H &kp A &kp B &kp L &kp I &kp Z &kp N &kp U &kp K &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "OLD_EMAIL";
         };
+
+        dota_shout_up: dota_shout_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RETURN>,
+                <&macro_pause_for_release>,
+                <&kp T &kp H &kp A &kp N &kp K &kp S &kp SPACE &kp COLON &kp RPAR>,
+                <&macro_wait_time 30>,
+                <&kp RETURN>;
+
+            label = "DOTA_SHOUT_UP";
+        };
     };
 
     keymap {
@@ -118,12 +131,12 @@
 
         game_layer {
             bindings = <
-&kp ESCAPE      &kp F5  &kp F6  &kp F7  &kp F8  &kp F9                &none      &none      &none           &none  &none  &kp BACKSPACE
-&kp O           &kp Q   &kp W   &kp E   &kp R   &kp T                 &none      &none      &none           &none  &none  &none
-&kp TAB         &kp A   &kp S   &kp D   &kp F   &kp G                 &none      &none      &none           &none  &none  &none
-&kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp V   &kp B                 &none      &none      &none           &none  &none  &none
-&none           &none   &kp J   &kp H   &kp M   &kp N   &kp LEFT_ALT  &kp LCTRL  &kp SPACE  &run_roll_dota  &none  &none  &none          &none
-                                                                      &none                                                              &to 0
+&kp ESCAPE      &none  &none  &none  &none  &none                &kp F9  &kp F8     &none           &none           &none  &kp BACKSPACE
+&kp P           &kp Q  &kp W  &kp E  &kp R  &kp T                &none   &none      &none           &none           &none  &none
+&kp TAB         &kp A  &kp S  &kp D  &kp F  &kp G                &none   &none      &none           &none           &none  &none
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B                &none   &none      &none           &none           &none  &none
+&none           &none  &kp J  &kp H  &kp M  &kp N  &kp LEFT_ALT  &kp O   &kp SPACE  &run_roll_dota  &dota_shout_up  &none  &none          &none
+                                                                 &none                                                                    &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -144,12 +157,12 @@
 
         mouse_control {
             bindings = <
-&to 0  &to 0  &to 0           &to 0             &to 0            &to 0         &to 0              &to 0             &to 0              &to 0             &to 0  &to 0
-&to 0  &to 0  &to 0           &msc MOVE_Y(15)   &to 0            &to 0         &to 0              &to 0             &to 0              &to 0             &to 0  &to 0
+&to 0  &to 0  &to 0           &to 0             &to 0            &to 0         &to 0               &to 0              &to 0               &to 0              &to 0  &to 0
+&to 0  &to 0  &to 0           &msc MOVE_Y(15)   &to 0            &to 0         &to 0               &to 0              &to 0               &to 0              &to 0  &to 0
 &to 0  &to 0  &mkp MCLK       &mkp RCLK         &mkp LCLK        &to 0         &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)  &mmv MOVE_Y(-1000)  &mmv MOVE_X(1000)  &to 0  &to 0
-&to 0  &to 0  &msc SCRL_LEFT  &msc MOVE_Y(-15)  &msc SCRL_RIGHT  &to 0         &trans             &trans            &to 0              &to 0             &to 0  &to 0
-&to 0  &to 0  &to 0           &to 0             &to 0            &to 0  &to 0  &to 0              &to 0             &to 0              &to 0             &mo 2  &to 0  &to 0
-                                                                               &to 0                                                                                   &to 0
+&to 0  &to 0  &msc SCRL_LEFT  &msc MOVE_Y(-15)  &msc SCRL_RIGHT  &to 0         &trans              &trans             &to 0               &to 0              &to 0  &to 0
+&to 0  &to 0  &to 0           &to 0             &to 0            &to 0  &to 0  &to 0               &to 0              &to 0               &to 0              &mo 2  &to 0  &to 0
+                                                                               &to 0                                                                                       &to 0
             >;
         };
 
