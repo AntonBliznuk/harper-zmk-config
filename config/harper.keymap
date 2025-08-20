@@ -131,12 +131,12 @@
 
         game_layer {
             bindings = <
-&kp ESCAPE      &none  &none  &none  &none  &none                &kp F9  &kp F8     &none           &none           &none  &kp BACKSPACE
-&kp P           &kp Q  &kp W  &kp E  &kp R  &kp T                &none   &none      &none           &none           &none  &none
-&kp TAB         &kp A  &kp S  &kp D  &kp F  &kp G                &none   &none      &none           &none           &none  &none
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B                &none   &none      &none           &none           &none  &none
-&none           &none  &kp J  &kp H  &kp M  &kp N  &kp LEFT_ALT  &kp O   &kp SPACE  &run_roll_dota  &dota_shout_up  &none  &none          &none
-                                                                 &none                                                                    &to 0
+&kp ESCAPE      &none  &none  &none  &none  &none         &kp F9     &kp F8     &none           &none           &none  &kp BACKSPACE
+&kp P           &kp Q  &kp W  &kp E  &kp R  &kp T         &none      &none      &none           &none           &none  &none
+&kp TAB         &kp A  &kp S  &kp D  &kp F  &kp G         &none      &none      &none           &none           &none  &none
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B         &none      &none      &none           &none           &none  &none
+&none           &none  &kp J  &kp H  &kp M  &kp N  &kp O  &kp LCTRL  &kp SPACE  &run_roll_dota  &dota_shout_up  &none  &none          &none
+                                                          &none                                                                       &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
