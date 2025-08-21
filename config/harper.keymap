@@ -98,7 +98,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp A &kp A &kp S &kp SPACE>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 100>,
                 <&kp F &kp S &kp S &kp S>;
 
             label = "INVOKER_GHOST_WALK";
@@ -109,7 +109,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp S &kp S &kp D &kp SPACE>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 100>,
                 <&kp LA(F) &kp D &kp D &kp D>;
 
             label = "INVOKER_ALACRITY";
