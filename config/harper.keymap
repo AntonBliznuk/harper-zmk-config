@@ -203,12 +203,12 @@
 
         home_row_turn_off {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans    &trans
-&trans  &kp A   &kp S   &kp D   &kp F   &trans          &trans  &kp J   &kp K   &kp L   &kp SEMI  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0   &trans  &trans  &trans  &trans    &trans  &trans
-                                                        &trans                                            &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &kp A   &kp S   &kp D   &kp F   &trans         &trans  &kp J   &kp K   &kp L   &kp SEMI  &to 5
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &mo 4   &mo 1  &to 0   &trans  &trans  &mo 7   &mo 2     &trans  &trans
+                                                       &trans                                            &trans
             >;
         };
 
