@@ -43,12 +43,12 @@
 
         default {
             bindings = <
-&kp ESC    &kp N1          &kp N2       &kp N3               &kp N4        &kp N5         &kp N6      &kp N7             &kp N8               &kp N9       &kp N0              &kp BACKSPACE
-&none      &kp Q           &kp W        &kp E                &kp R         &kp T          &kp Y       &kp U              &kp I                &kp O        &kp P               &none
-&kp TAB    &mt LEFT_ALT A  &mt LCTRL S  &mt RIGHT_COMMAND D  &mt LSHIFT F  &kp G          &kp H       &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RCTRL L  &mt RIGHT_ALT SEMI  &none
-&kp LSHFT  &kp Z           &kp X        &kp C                &kp V         &kp B          &kp C_MUTE  &none              &kp N                &kp M        &kp COMMA           &kp DOT
-&kp FSLH   &none           &none        &none                &none         &none   &none  &none       &kp SPACE          &kp ENTER            &none        &none               &none          &none
-                                                                                          &none                                                                                               &none
+&kp ESC    &kp N1          &kp N2       &kp N3               &kp N4        &kp N5         &kp N6  &kp N7             &kp N8               &kp N9       &kp N0              &kp BACKSPACE
+&none      &kp Q           &kp W        &kp E                &kp R         &kp T          &kp Y   &kp U              &kp I                &kp O        &kp P               &none
+&kp TAB    &mt LEFT_ALT A  &mt LCTRL S  &mt RIGHT_COMMAND D  &mt LSHIFT F  &kp G          &kp H   &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RCTRL L  &mt RIGHT_ALT SEMI  &none
+&kp LSHFT  &kp Z           &kp X        &kp C                &kp V         &kp B          &none   &none              &kp N                &kp M        &kp COMMA           &kp DOT
+&kp FSLH   &none           &none        &none                &none         &none   &mo 1  &none   &kp SPACE          &kp ENTER            &none        &none               &none          &none
+                                                                                          &none                                                                                           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_u_d>;
@@ -56,15 +56,17 @@
 
         symbols {
             bindings = <
-&kp ESC         &kp F1  &kp F2  &kp F3  &kp F4  &kp F5         &kp F6      &kp F7     &kp F8      &kp F9  &kp F10  &kp F11
-&none           &none   &none   &none   &none   &none          &none       &none      &none       &none   &none    &none
-&none           &none   &none   &none   &none   &none          &none       &none      &none       &none   &none    &kp PIPE
-&kp LEFT_SHIFT  &none   &none   &none   &none   &none          &kp C_MUTE  &none      &none       &none   &none    &none
-&none           &none   &none   &none   &none   &none   &none  &none       &kp SPACE  &kp RETURN  &none   &none    &none     &none
-                                                               &none                                                         &none
+&kp ESC         &kp F1     &kp F2         &kp F3     &kp F4        &kp F5                  &kp F6  &kp F7             &kp F8                &kp F9             &kp F10                &kp F11
+&none           &none      &kp HASH       &kp EQUAL  &kp ASTERISK  &kp QUESTION            &none   &kp DOUBLE_QUOTES  &kp SQT               &none              &none                  &none
+&none           &kp TILDE  &kp AT_SIGN    &kp MINUS  &kp PLUS      &kp PERCENT             &none   &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS  &kp LEFT_BRACE     &kp UNDERSCORE         &kp PIPE
+&kp LEFT_SHIFT  &none      &kp AMPERSAND  &kp GRAVE  &kp DOLLAR    &kp EXCLAMATION         &none   &none              &none                 &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
+&kp BACKSLASH   &none      &none          &none      &none         &none            &none  &none   &kp SPACE          &kp RETURN            &none              &none                  &none            &none
+                                                                                           &none                                                                                                       &none
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &scroll_l_r>;
+            sensor-bindings =
+                <&inc_dec_kp PG_UP PG_DN>,
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         manage {
