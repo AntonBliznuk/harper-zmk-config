@@ -47,7 +47,7 @@
 &none      &kp Q           &kp W        &kp E                &kp R         &kp T          &kp Y   &kp U              &kp I                &kp O        &kp P               &none
 &kp TAB    &mt LEFT_ALT A  &mt LCTRL S  &mt RIGHT_COMMAND D  &mt LSHIFT F  &kp G          &kp H   &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RCTRL L  &mt RIGHT_ALT SEMI  &none
 &kp LSHFT  &kp Z           &kp X        &kp C                &kp V         &kp B          &none   &none              &kp N                &kp M        &kp COMMA           &kp DOT
-&kp FSLH   &none           &none        &none                &none         &none   &mo 1  &none   &kp SPACE          &kp ENTER            &none        &none               &none          &none
+&kp FSLH   &none           &none        &none                &none         &none   &mo 1  &none   &kp SPACE          &kp ENTER            &none        &mo 2               &none          &none
                                                                                           &none                                                                                           &to 4
             >;
 
@@ -73,12 +73,12 @@
 
         manage {
             bindings = <
-&none       &none       &none      &none        &none        &none         &none      &none      &none      &none      &none    &none
-&none       &kp INS     &kp PSCRN  &kp K_CMENU  &none        &none         &kp PG_UP  &kp HOME   &kp UP     &kp END    &none    &none
-&none       &none       &none      &none        &none        &none         &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL  &kp BSPC
-&kp LSHIFT  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &none         &none      &none      &none      &none      &none    &none
-&none       &none       &kp LCTRL  &kp LGUI     &kp LALT     &mo 3  &mo 2  &mo 1      &kp SPACE  &kp SPACE  &mo 2      &mo 3    &mo 1     &kp RALT
-                                                                           &kp RGUI                                                       &kp RCTRL
+&kp ESCAPE              &none                  &none                  &none                     &none                         &none                         &none                     &none                     &none                     &none                         &none                         &none
+&none                   &kp LS(LA(LC(LG(Q))))  &kp LS(LA(LC(LG(W))))  &kp LC(LEFT_COMMAND)      &kp RS(RA(RC(RG(R))))         &kp LS(LA(LC(LG(T))))         &kp RA(RC(RG(NUMBER_1)))  &kp RA(RC(RG(NUMBER_2)))  &kp RA(RC(RG(NUMBER_3)))  &kp RA(RC(RG(NUMBER_4)))      &kp RA(RC(RG(NUMBER_5)))      &none
+&none                   &kp LS(LA(LC(LG(A))))  &kp LS(LA(LG(LC(S))))  &kp LS(LA(LEFT_COMMAND))  &kp LA(LC(LS(LEFT_COMMAND)))  &kp LS(LA(LC(LG(G))))         &kp LEFT_ARROW            &kp DOWN_ARROW            &kp UP_ARROW              &kp RIGHT                     &kp LS(LA(LC(LG(Y))))         &none
+&kp LSHIFT              &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(X))))  &kp LS(LA(LC(LG(C))))     &kp LS(LA(LC(LG(V))))         &kp LS(LA(LC(LG(B))))         &none                     &none                     &kp RS(RA(RC(RG(N1))))    &kp RS(RA(RC(RG(NUMBER_2))))  &kp RS(RA(RC(RG(NUMBER_3))))  &kp RS(RA(RC(RG(NUMBER_4))))
+&kp RS(RA(RC(RG(N5))))  &none                  &none                  &none                     &none                         &none                  &none  &kp LS(LA(LC(LG(P))))     &kp LS(LA(LC(LG(L))))     &none                     &none                         &none                         &none                         &none
+                                                                                                                                                            &none                                                                                                                                                                   &none
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW &inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
