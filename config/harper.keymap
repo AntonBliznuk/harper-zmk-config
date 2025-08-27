@@ -48,10 +48,12 @@
 &kp TAB    &mt LEFT_ALT A  &mt LCTRL S  &mt RIGHT_COMMAND D  &mt LSHIFT F  &kp G          &kp H   &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RCTRL L  &mt RIGHT_ALT SEMI  &none
 &kp LSHFT  &kp Z           &kp X        &kp C                &kp V         &kp B          &none   &none              &kp N                &kp M        &kp COMMA           &kp DOT
 &kp FSLH   &none           &none        &none                &none         &none   &mo 1  &none   &kp SPACE          &kp ENTER            &none        &none               &none          &none
-                                                                                          &none                                                                                           &none
+                                                                                          &none                                                                                           &to 4
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_u_d>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         symbols {
@@ -91,19 +93,19 @@
 &none              &none                            &kp LCTRL                          &kp LGUI                          &kp LALT                         &mo 3                             &mo 2  &mo 1     &kp SPACE  &kp SPACE  &mo 2      &mo 3  &mo 1  &kp RALT
                                                                                                                                                                                                    &kp RGUI                                                 &kp RCTRL
             >;
-
-            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW &inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         game {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                        &trans                                          &trans
+&kp ESCAPE      &trans  &trans  &trans  &trans  &trans                &kp F9     &kp F8     &kp F7  &trans  &trans  &kp BACKSPACE
+&kp P           &kp Q   &kp W   &kp E   &kp R   &kp T                 &trans     &trans     &trans  &trans  &trans  &trans
+&kp TAB         &kp A   &kp S   &kp D   &kp F   &kp G                 &trans     &trans     &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp V   &kp B                 &trans     &trans     &trans  &trans  &trans  &trans
+&trans          &trans  &kp J   &kp H   &kp M   &kp N   &kp LEFT_ALT  &kp LCTRL  &kp SPACE  &trans  &trans  &trans  &trans         &trans
+                                                                      &trans                                                       &to 0
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         mouse {
@@ -118,6 +120,17 @@
         };
 
         homerow_off {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                        &trans                                          &trans
+            >;
+        };
+
+        layer_7 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
