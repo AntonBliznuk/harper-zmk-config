@@ -100,7 +100,7 @@
             bindings = <
 &kp ESCAPE      &trans  &trans  &trans  &trans  &trans                &kp F9     &kp F8     &kp F7  &trans  &trans  &kp BACKSPACE
 &kp P           &kp Q   &kp W   &kp E   &kp R   &kp T                 &trans     &trans     &trans  &trans  &trans  &trans
-&kp TAB         &kp A   &kp S   &kp D   &kp F   &kp G                 &trans     &trans     &trans  &trans  &trans  &trans
+&kp TAB         &kp A   &kp S   &kp D   &kp F   &kp G                 &trans     &kp P      &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp V   &kp B                 &trans     &trans     &trans  &trans  &trans  &trans
 &trans          &trans  &kp J   &kp H   &kp M   &kp N   &kp LEFT_ALT  &kp LCTRL  &kp SPACE  &trans  &trans  &trans  &trans         &trans
                                                                       &trans                                                       &to 0
